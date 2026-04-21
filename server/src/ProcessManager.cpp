@@ -87,7 +87,7 @@ HANDLE ProcessManager::launchWorker(SOCKET clientSocket, const std::string& conf
         CloseHandle(pi.hThread);
         CloseHandle(hReadPipe);
         CloseHandle(hWritePipe);
-        return false;
+        return NULL;
     }
 
     CloseHandle(hReadPipe);

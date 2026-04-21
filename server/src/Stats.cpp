@@ -26,6 +26,8 @@ Stats::Stats(bool isServer) {
 
 	pStats =(SharedStats*)MapViewOfFile(hMapFile, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(SharedStats));
 	if (!pStats) {
+		CloseHandle(hMapFile);
+		CloseHandle(hMutex);
 		throw std::runtime_error("Failed to map view of file");
 	}
 	if (isServer) {
