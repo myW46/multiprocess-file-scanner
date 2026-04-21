@@ -1,0 +1,45 @@
+{
+  "types": [
+    {
+      "name": "ReverseShell",
+      "pattern": "/bin/bash -i",
+      "mode": "text",
+      "description": "can provide external access to the console"
+
+    },
+    {
+      "name": "ForseRemove",
+      "pattern": "rm -rf",
+      "mode": "text",
+      "description": "files and directories may be deleted"
+
+
+    },
+    {
+      "name": "FakeIP",
+      "pattern": "192.168.1.100",
+      "mode": "text",
+      "description": "Control IP address found"
+
+    },
+    {
+      "name": "HexExample",
+      "pattern": "4889E59090",
+      "mode": "hex",
+      "description": "Control IP address found"
+
+    },
+    {
+      "name": "Null_Threat",
+      "pattern": "00000000",
+      "mode": "hex",
+      "description": "Sequence of 4 null bytes detected"
+    },
+    {
+      "name": "EAX_Clear",
+      "pattern": "31C0",
+      "mode": "hex",
+      "description": "x86 opcode: XOR EAX, EAX"
+    }
+  ]
+}
